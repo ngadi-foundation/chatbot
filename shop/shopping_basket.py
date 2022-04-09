@@ -27,6 +27,10 @@ class ShoppingCart:
         print("Your cart is empty.")
         return False
 
+    def clear(self):
+        self.__items.clear()
+        return True
+
     @property
     def items(self):
         return [(item, self.__items.count(item)) for item in set(self.__items)]
